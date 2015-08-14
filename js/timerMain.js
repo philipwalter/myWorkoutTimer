@@ -1,3 +1,31 @@
+/** Let's try making this a jQuery plugin */
+
+(function() {
+	
+	$.fn.intervalTimer = function(options) {
+		
+		var opts = $.extend({
+			'minutes': 10,
+			'seconds' : 0
+		}, options);
+		
+		var mins = opts.minutes, secs = opts.seconds;
+		
+		this.getMinutes = function() {
+			console.log(mins);
+			return this;
+		};
+		
+		this.countDown = function() {
+			
+		};
+		
+		console.log($(this).html() + ' with ' + mins + ' minutes.');
+		return this;
+	}
+	
+})(jQuery);
+
 /** @namespace */
 window.MyModule = {};
 

@@ -22,16 +22,24 @@
 
 	<div id="timerTest"></div>
 	
+	<div id="intervalTest">Different Stuff</div>
+	
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
 	<!-- Include timer scripts -->
 	<script src="js/timerMain.js"></script>
-	<!--<script>
-clock1 = new Timer;
+	<script>
 	
-	clock1.countDown;
-	</script>-->
+		$(document).ready(function() {
+			'use strict';
+			
+			$('#intervalTest').intervalTimer({'minutes': 40});
+			
+			$('#intervalTest').intervalTimer().getMinutes();
+		
+		});
+	</script>
   </body>
 </html>
