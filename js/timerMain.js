@@ -1,6 +1,39 @@
+/** Let's try making this a jQuery plugin with the jQuery UI Widget Factory */
+(function ( $, window, document, undefined ) {
+	
+	$.widget( "madyogi.timerWidget" , {
+		
+		_create: function() {
+			
+			this.minutes = 0;
+			this.seconds = 30;
+			var	setup = false;
+				
+			setup = true;
+			
+			if(!setup) {
+				this.destroy;
+				return false;
+			}
+			
+		},
+		
+		getMinutes: function() {
+			console.log(this.minutes);
+		},
+		
+		setMinutes: function(m) {
+			this.minutes = m;
+		}
+		
+	});
+	
+})(jQuery, window, document);
+
+
 /** Let's try making this a jQuery plugin */
 
-(function() {
+(function($) {
 	
 	$.fn.intervalTimer = function(options) {
 		
